@@ -49,9 +49,9 @@ def main(argv=None):
         foundPosts = []
         reddit = praw.Reddit(client_id='<client>',
                              client_secret='<secret>',
-                             user_agent='<agent>')
+                             user_agent='windows:py-sb-botw:0.1 (by /u/6_lasers)')
         
-        search = reddit.subreddit('postpreview').search(input, syntax='lucene', sort='new')
+        search = reddit.subreddit('starbound').search(input, syntax='lucene', sort='new')
         for result in search:
             foundPosts.append({
                 'data': {
