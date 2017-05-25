@@ -67,6 +67,7 @@ def main(argv=None):
     # BotW topic posts. By convention, these contain
     # "This weeks build topic" in the text and have a title like:
     # "BOTW: <something>"
+    # TODO: this might change (as well as other text patterns this script relies on)
     for post in foundPosts:
         if "This weeks build topic" in post['data']['selftext']:
             print "  - title: " + post['data']['title'].split(":")[1].strip()
