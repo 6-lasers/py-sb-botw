@@ -1,5 +1,9 @@
 # py-sb-botw
-Python tools for managing build of the week
+Python tools for managing build of the week.
+
+Note that scraping data directly from Reddit requires OAuth2 to be setup (https://praw.readthedocs.io/en/latest/getting_started/authentication.html#oauth). For obvious reasons, client ID and secret are not stored in the Github repo...
+
+The scripts here also rely on Python Reddit API Wrapper (PRAW). https://praw.readthedocs.io/en/latest/getting_started/installation.html
 
 ## Workflow for maintaining Hall of Fame:
 
