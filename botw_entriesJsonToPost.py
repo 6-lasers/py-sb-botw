@@ -119,7 +119,7 @@ def main(argv=None):
             entries.append(("[ {0} by {1} ] (https://www.reddit.com{2})".format(title, post['data']['author'], post['data']['permalink'].split("?")[0]),post['data']['score'], rejected))
     
     # Separate debugging info from actual output
-    print "\n\n"
+    print "\n\n--List of entries begins--\n\n"
     
     # Print all entries. Mark 'rejected' ones with WARNING
     # so that they can be hand-reviewed
@@ -128,15 +128,14 @@ def main(argv=None):
             print "---WARNING---"
         print entry[0] + "\n"
     
-    # Find which entry has the highest score by
-    # sorting in descending order
+    print "\n\n--Entries sorted by score begins--\n\n"
+
+    # Sort entries in descending order of score
     entries.sort(key=operator.itemgetter(1), reverse=True)
-    print "Highest overall:"
-    print entries[0][0]
-    # Try again, but filtering 'rejected' entries. Most of the time
-    # this will be the appropriate answer
-    print "Highest without warning:"
-    print filter(lambda x: x[2] == False, entries)[0][0]
+    # Print all entries along with their score.
+    # "rejected" entries get an asterisk and may be false positives
+    for entry in entries:
+        print "({1}{2})\t{0}".format(entry[0], entry[1], "*" if entry[2] else "")
     
     return 0
 
