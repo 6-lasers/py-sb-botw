@@ -39,33 +39,18 @@ def main(argv=None):
     
     # Compile list of all entrants and entries
     entrants = dict()
-    winners = dict()
-    runnersup = dict()
     entries = []
     
     outTxtFile = open(outTxtName, "w")
     
-    # Collect list of all entries
+    # Collect list of all entries and entrants
     for botw in database['botw']:
         for entry in botw['entries']:
             entries.append(entry)
-    
-    # Collect list of all entrants, winners, and runners up
-    for botw in database['botw']:
-        for entry in botw['entries']:
             # Build list of entrants
             if entry['entrant'] not in entrants:
                 entrants[entry['entrant']] = 0
             entrants[entry['entrant']] += 1
-        # 'winner' is an array since there can be a tie
-        for winner in botw['winner']:
-            if winner not in winners:
-                winners[winner] = 0
-            winners[winner] += 1
-        # 'runnerup' is hand-selected, so there can't be a tie--implemented as scalar
-        if botw['runnerup'] not in runnersup:
-            runnersup[botw['runnerup']] = 0
-        runnersup[botw['runnerup']] += 1
     
     # Generate header
     outTxtFile.write("---\n\n")
@@ -83,8 +68,10 @@ def main(argv=None):
         for winner in botw['winner']:
             winning_entry = filter(lambda x:x['entrant']==winner, botw['entries'])[0]
             outTxtFile.write("* Winner{3}: [{0} by {1}]({2})\n\n".format(winning_entry['title'], winning_entry['entrant'], winning_entry['url'], " (tied)" if len(botw['winner']) > 1 else ""))
-        runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
-        outTxtFile.write("* Runner up: [{0} by {1}]({2})\n\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
+        # Runnerup is discontinued in newer topics
+        if botw['runnerup'] != "":
+            runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
+            outTxtFile.write("* Runner up: [{0} by {1}]({2})\n\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
         outTxtFile.write("---\n\n")
     
     outTxtFile.close()
