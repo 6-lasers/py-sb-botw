@@ -24,6 +24,10 @@ import operator
 # You can remove this if you just want to load JSON from a text file
 import praw
 
+# Reddit username of the BotW curator
+botw_curator = "-ologist"
+botw_topic_pattern = r"Build of the Week:" # Used to be r"BOTW\s*:"
+
 def main(argv=None):
     usage="botw_entriesJsonToPost.py <input> <skip count>"
     parser = optparse.OptionParser(usage=usage)
@@ -78,7 +82,7 @@ def main(argv=None):
         # Non-image posts by Syntax1985 beginning with BOTW: are considered to be cut-offs
         # TODO: Cutoff requirements will change
         # Image link determined if selftext_html is None
-        if post['data']['selftext_html'] != None and post['data']['author'] == "Syntax1985" and re.match(r"BOTW\s*:", post['data']['title']):
+        if post['data']['selftext_html'] != None and post['data']['author'] == botw_curator and re.match(botw_topic_pattern, post['data']['title']):
             # Consider skip argument here
             cnt += 1
             if cnt > skip:
@@ -129,7 +133,7 @@ def main(argv=None):
         print entry[0] + "\n"
     
     print "\n\n--Entries sorted by score begins--\n\n"
-
+    
     # Sort entries in descending order of score
     entries.sort(key=operator.itemgetter(1), reverse=True)
     # Print all entries along with their score.
