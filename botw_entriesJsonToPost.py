@@ -79,8 +79,7 @@ def main(argv=None):
     entries = []
     cnt = 0
     for post in foundPosts:
-        # Non-image posts by Syntax1985 beginning with BOTW: are considered to be cut-offs
-        # TODO: Cutoff requirements will change
+        # Non-image posts by the BotW curator beginning with the topic pattern are considered to be cut-offs
         # Image link determined if selftext_html is None
         if post['data']['selftext_html'] != None and post['data']['author'] == botw_curator and re.match(botw_topic_pattern, post['data']['title']):
             # Consider skip argument here
@@ -96,17 +95,17 @@ def main(argv=None):
         elif post['data']['selftext_html'] == None or "http" in post['data']['selftext']:
             rejected = False
             
-            # Expected format: [BotW] <title>.
+            # Expected format: [BotW] <title> or (BotW) <title>.
             # "BotW" not case sensitive
             # Okay to have other characters in the brackets
-            expmatch = re.search(r"\[.*BotW.*\]\s*(.*)", post['data']['title'], re.IGNORECASE)
+            expmatch = re.search(r"(?:\[.*BotW.*\]|\(.*BotW.*\))\s*(.*)", post['data']['title'], re.IGNORECASE)
             if expmatch:
                 title = expmatch.group(1)
             else:
-                # Backup: try looking for BotW: <title>
+                # Backup: try looking for BotW: <title>, BotW- <title>, or just BotW <title>
                 # "BotW" not case sensitive
-                # Okay to have other characters before the colon
-                expmatch = re.search(r".*BotW.*:\s*(.*)", post['data']['title'], re.IGNORECASE)
+                # Okay to have other characters before the colon or dash
+                expmatch = re.search(r".*BotW(?:.*?[:-])?\s*(.*)", post['data']['title'], re.IGNORECASE)
                 if expmatch:
                     title = expmatch.group(1)
                 else:
