@@ -22,6 +22,19 @@ import re
 # You can remove this if you just want to load JSON from a text file
 import praw
 
+# Pattern to identify a BotW topic post
+topic_pattern = "Build of the Week theme is:"
+# Old pattern was "This weeks build topic"
+
+# Patterns to look for in the topic post
+entries_begin_pattern = "**ENTRIES**"
+# old pattern was "Current entrees"
+entries_end_pattern = "**WINNER**"
+# old pattern was "-------------"
+
+desc_begin_pattern = "You must submit your entry" # used to be "Build Criteria"
+desc_end_pattern = "BUILDING TIPS" # used to be "Winners will be chosen"
+
 def main(argv=None):
     usage="botw_scrapeJsonToYml.py <input> <output.yml>"
     parser = optparse.OptionParser(usage=usage)
@@ -65,51 +78,61 @@ def main(argv=None):
     
     # Go through each search result. We're looking for
     # BotW topic posts. By convention, these contain
-    # "This weeks build topic" in the text and have a title like:
-    # "BOTW: <something>"
-    # TODO: this might change (as well as other text patterns this script relies on)
+    # a fixed pattern in the text
     for post in foundPosts:
-        if "This weeks build topic" in post['data']['selftext']:
+        if topic_pattern in post['data']['selftext']:
             outputYmlFile.write("  - title: " + post['data']['title'].split(":")[1].strip() + "\n")
             outputYmlFile.write("    url: " + post['data']['url'] + "\n")
             
             # Compile list of entries
             entries = []
             entries_started = False
+            desc = ""
+            desc_started = False
+            winners = []
+            winner_started = False
             for line in post['data']['selftext'].splitlines():
-                # Convention is that a "Current entrees" (sic) line begins the entries
-                if "Current entrees" in line:
+                line = replace_unicode(line)
+                # Search for pattern which indicates beginning of entries
+                if entries_begin_pattern in line:
                     entries_started = True
-                elif entries_started:
-                    # and a bunch of dashes ends the entries
-                    if "-------------" in line:
-                        entries_started = False
-                    # Get all non-blank lines in between
-                    elif line != "":
-                        # Format looks something like:
-                        # [The last remnant by TrIpTiCuS] (https://www.reddit.com/r/starbound/comments/6bhc4g/botwthe_last_remnant_repost_because_i_forgot_botw/)
-                        expmatch = re.search("\[(.*)\s+by\s+(.*)\]\s*\((.*)\)", line)
-                        if expmatch:
-                            entries.append(expmatch.groups())
-                        else:
-                            # Due to typos, the expression sometimes fails, so fail gracefully
-                            # TODO: is there any way programmatically to salvage the line?
-                            print "ERROR on line: " + line
-                # Convention is that the description begins with "Build Criteria"
-                elif "Build Criteria" in line:
+                # continue until pattern which indicates end of entries
+                elif entries_end_pattern in line:
+                    entries_started = False
+                    # Winner starts right after entries
+                    # TODO: this might not be true forever
+                    winner_started = True
+                # Get all non-blank lines in between
+                elif entries_started and line != "":
+                    # Format looks something like:
+                    # [The last remnant by TrIpTiCuS] (https://www.reddit.com/r/starbound/comments/6bhc4g/botwthe_last_remnant_repost_because_i_forgot_botw/)
+                    expmatch = re.search("\[(.*)\s+by\s+(.*)\]\s*\((.*)\)", line)
+                    if expmatch:
+                        entries.append(expmatch.groups())
+                    else:
+                        # Due to typos, the expression sometimes fails, so fail gracefully
+                        # TODO: is there any way programmatically to salvage the line?
+                        print "ERROR on line: " + line
+                # Grab winner(s)
+                elif winner_started and line != "":
+                    expmatch = re.search("\[(.*)\s+by\s+(.*)\]\s*\((.*)\)", line)
+                    winners.append(expmatch.group(2))
+                # Identify description beginning
+                elif desc_begin_pattern in line:
                     desc_started = True
                 elif desc_started:
-                    # and description ends with "Winners will be chosen" or a bunch of dashes
-                    if "-------------" in line or "Winners will be chosen" in line:
+                    # and ending
+                    if desc_end_pattern in line:
                         desc_started = False
-                    # All the lines in between make up the description
+                    # All the lines in between make up the description.
+                    # Remove leading spaces
                     else:
-                        desc += "      " + line + "\n"
+                        desc += "      " + line.lstrip() + "\n"
             
             # Print description
             outputYmlFile.write("    desc: |\n")
             outputYmlFile.write(desc)
-
+            
             # Now that we have the list, print it in YAML format.
             # I don't use a YAML dumper because it doesn't
             # get the format the way I like it..
@@ -118,9 +141,9 @@ def main(argv=None):
                 outputYmlFile.write("    - entrant: \"{0}\"\n".format(entry[1]))
                 outputYmlFile.write("      title: \"{0}\"\n".format(entry[0]))
                 outputYmlFile.write("      url: " + entry[2] + "\n")
-            # Have to fill in winner, runnerup by hand since that comes from next week's post
-            outputYmlFile.write("    winner: [\"\"]\n")
-            outputYmlFile.write("    runnerup: \"\"\n")
+            outputYmlFile.write("    winner:\n")
+            for winner in winners:
+                outputYmlFile.write("      - \"{0}\"\n".format(winner))
     
     outputYmlFile.close()
     
