@@ -69,7 +69,7 @@ def main(argv=None):
             winning_entry = filter(lambda x:x['entrant']==winner, botw['entries'])[0]
             outTxtFile.write("* Winner{3}: [{0} by {1}]({2})\n\n".format(winning_entry['title'], winning_entry['entrant'], winning_entry['url'], " (tied)" if len(botw['winner']) > 1 else ""))
         # Runnerup is discontinued in newer topics
-        if botw['runnerup'] != "":
+        if 'runnerup' in botw:
             runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
             outTxtFile.write("* Runner up: [{0} by {1}]({2})\n\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
         outTxtFile.write("---\n\n")
