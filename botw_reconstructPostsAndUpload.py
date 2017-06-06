@@ -51,7 +51,8 @@ def main(argv=None):
                          username='<user>', password='<password>')
     
     # Get the topic ID in which to construct the archive
-    topic = praw.models.Submission(reddit, id=uploadTopicID)
+    if uploadTopicID != "":
+        topic = praw.models.Submission(reddit, id=uploadTopicID)
     
     # Relevant time deltas
     endOfWeek = datetime.timedelta(days=6)
@@ -68,8 +69,12 @@ def main(argv=None):
     # containing entries, winner, description, etc.
     # Store it in one big string
     for botw in database['botw']:
+        # If this topic has a specially marked duration,
+        # increment by that many weeks. Default is 1
+        duration = botw['duration'] if 'duration' in botw else 1
+        
         # Date, title, description
-        datestring = "Week of **{0}-{1}**".format(currentdate.strftime("%B %d, %Y"), (currentdate + endOfWeek).strftime("%B %d, %Y"))
+        datestring = "Week of **{0}-{1}**".format(currentdate.strftime("%B %d, %Y"), (currentdate + (nextWeek * (duration - 1)) + endOfWeek).strftime("%B %d, %Y"))
         entryString = "---\n"
         entryString += datestring + ". Week's theme was:\n"
         entryString += "## " + botw['title'] + "\n"
@@ -102,8 +107,8 @@ def main(argv=None):
             comment_link = topic.reply(entryString).permalink()
         comments.append((datestring, botw['title'], comment_link))
         
-        # Increment to next week
-        currentdate += nextWeek
+        # Increment to next topic's date
+        currentdate += nextWeek * duration
     
     # Create string for table of contents
     postString = "---\n"
@@ -111,12 +116,11 @@ def main(argv=None):
         postString += "[{0}: {1}]({2})\n\n".format(comment[0], comment[1], comment[2])
         postString += "---\n\n"
     
-    # If 'append' set, preserve previous post contents
-    if append:
-        postString = topic.selftext + "\n\n" + postString
-    
     # Replace topic text with this string
     if uploadTopicID != "":
+        # If 'append' set, preserve previous post contents
+        if append:
+            postString = topic.selftext + "\n\n" + postString
         topic.edit(postString)
     
     # Also write to text file
