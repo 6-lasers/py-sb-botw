@@ -52,6 +52,8 @@ def writeHallOfFameEntryAlt(fp, botw):
     if 'runnerup' in botw:
         runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
         fp.write("|[{0} by {1}]({2})\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
+    else:
+        fp.write("\n")
 #
 # END FUNCTIONS FOR FORMATTER 'exp'
 #
