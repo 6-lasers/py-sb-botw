@@ -32,6 +32,8 @@ entries_begin_pattern = "**ENTRIES**"
 entries_end_pattern = "**WINNER**"
 # old pattern was "-------------"
 
+winners_end_pattern = "**RUNNER-UP**"
+
 desc_begin_pattern = "You must submit your entry" # used to be "Build Criteria"
 desc_end_pattern = "BUILDING TIPS" # used to be "Winners will be chosen"
 
@@ -64,7 +66,7 @@ def main(argv=None):
                              client_secret='<secret>',
                              user_agent='windows:py-sb-botw:0.1 (by /u/6_lasers)')
         
-        search = reddit.subreddit('starbound').search(input, syntax='lucene', sort='new')
+        search = reddit.subreddit('starbound').search(input, syntax='cloudsearch', sort='new')
         for result in search:
             foundPosts.append({
                 'data': {
@@ -91,6 +93,8 @@ def main(argv=None):
             desc_started = False
             winners = []
             winner_started = False
+            runnerup = None
+            runnerup_started = False
             for line in post['data']['selftext'].splitlines():
                 line = replace_unicode(line)
                 # Search for pattern which indicates beginning of entries
@@ -102,7 +106,13 @@ def main(argv=None):
                     # Winner starts right after entries
                     # TODO: this might not be true forever
                     winner_started = True
-                # Get all non-blank lines in between
+                elif winners_end_pattern in line:
+                    winner_started = False
+                    # Runner-up starts right after winner
+                    # TODO: this might not be true forever
+                    runnerup_started = True
+                # Get all non-blank lines in between entry
+                # start and end--these are our entries
                 elif entries_started and line != "":
                     # Format looks something like:
                     # [The last remnant by TrIpTiCuS] (https://www.reddit.com/r/starbound/comments/6bhc4g/botwthe_last_remnant_repost_because_i_forgot_botw/)
@@ -117,6 +127,10 @@ def main(argv=None):
                 elif winner_started and line != "":
                     expmatch = re.search("\[(.*)\s+by\s+(.*)\]\s*\((.*)\)", line)
                     winners.append(expmatch.group(2))
+                # Grab runnerup
+                elif runnerup_started and line != "":
+                    expmatch = re.search("\[(.*)\s+by\s+(.*)\]\s*\((.*)\)", line)
+                    runnerup = expmatch.group(2)
                 # Identify description beginning
                 elif desc_begin_pattern in line:
                     desc_started = True
@@ -144,6 +158,8 @@ def main(argv=None):
             outputYmlFile.write("    winner:\n")
             for winner in winners:
                 outputYmlFile.write("      - \"{0}\"\n".format(winner))
+            if runnerup:
+                outputYmlFile.write("    runnerup: \"{0}\"\n".format(runnerup))
     
     outputYmlFile.close()
     
