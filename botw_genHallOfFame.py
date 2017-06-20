@@ -6,7 +6,7 @@
 #  Generates a Hall of Fame post formatted
 #  for posting on Reddit.
 #
-#  Usage: botw_genHallOfFame.py <input.yml> <output.txt>
+#  Usage: botw_genHallOfFame.py <input.yml> <output.txt> [--format <format select>]
 #
 ######################################################
 
@@ -16,9 +16,61 @@ import operator
 
 import yaml
 
+
+#
+# BEGIN FUNCTIONS FOR FORMATTER 'default'
+#
+def writeHallOfFameEntry(fp, botw):
+    fp.write("[{0}]({1})\n\n".format(botw['title'], botw['url']))
+    for winner in botw['winner']:
+        winning_entry = filter(lambda x:x['entrant']==winner, botw['entries'])[0]
+        fp.write("* Winner{3}: [{0} by {1}]({2})\n\n".format(winning_entry['title'], winning_entry['entrant'], winning_entry['url'], " (tied)" if len(botw['winner']) > 1 else ""))
+    # Runnerup is discontinued in newer topics
+    if 'runnerup' in botw:
+        runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
+        fp.write("* Runner up: [{0} by {1}]({2})\n\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
+    fp.write("---\n\n")
+#
+# END FUNCTIONS FOR FORMATTER 'default'
+#
+
+#
+# BEGIN FUNCTIONS FOR FORMATTER 'exp'
+#
+def writeHallOfFameHeaderAlt(fp):
+    fp.write("BotW Topic|Winner(s)|Runner up\n")
+    fp.write("-|-|-\n")
+
+def writeHallOfFameEntryAlt(fp, botw):
+    fp.write("[**{0}**]({1})|".format(botw['title'], botw['url']))
+    if len(botw['winner']) > 1:
+        fp.write("**TIE**: ")
+    for winner in botw['winner']:
+        winning_entry = filter(lambda x:x['entrant']==winner, botw['entries'])[0]
+        fp.write("[{0} by {1}]({2}){3}".format(winning_entry['title'], winning_entry['entrant'], winning_entry['url'], " AND " if len(botw['winner']) > 1 and winner != botw['winner'][-1] else ""))
+    # Runnerup is discontinued in newer topics
+    if 'runnerup' in botw:
+        runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
+        fp.write("|[{0} by {1}]({2})\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
+#
+# END FUNCTIONS FOR FORMATTER 'exp'
+#
+
+formats_dict = {
+    'default': {
+        'header_func': None,
+        'entry_func': writeHallOfFameEntry,
+    },
+    'exp': {
+        'header_func': writeHallOfFameHeaderAlt,
+        'entry_func': writeHallOfFameEntryAlt,
+    }
+}
+
 def main(argv=None):
-    usage="botwParse.py <input.yml> <output.txt>"
+    usage="botwParse.py <input.yml> <output.txt> [--format <format select>]"
     parser = optparse.OptionParser(usage=usage)
+    parser.add_option("--format", "-f", help="select output format", default="default")
     
     (options, args) = parser.parse_args()
     
@@ -29,6 +81,9 @@ def main(argv=None):
         print "ERROR: Invalid number of arguments"
         print usage
         return 1
+        
+    # Select formatter based on optional argument
+    formatter = formats_arr[options.format]
     
     # Load YAML database
     ymlFile = open(ymlName, "r")
@@ -62,17 +117,17 @@ def main(argv=None):
     outTxtFile.write("---\n\n")
     outTxtFile.write("## **Hall of Fame**\n\n")
     outTxtFile.write("---\n\n")
-    # Generate actual Hall of Fame
+    
+    #
+    # Generate actual Hall of Fame using the selected formatter
+    #
+    
+    # Not every formatter has a header
+    if 'header_func' in formatter and formatter['header_func']:
+        formatter['header_func'](outTxtFile)
+    # Write entries
     for botw in reversed(database['botw']):
-        outTxtFile.write("[{0}]({1})\n\n".format(botw['title'], botw['url']))
-        for winner in botw['winner']:
-            winning_entry = filter(lambda x:x['entrant']==winner, botw['entries'])[0]
-            outTxtFile.write("* Winner{3}: [{0} by {1}]({2})\n\n".format(winning_entry['title'], winning_entry['entrant'], winning_entry['url'], " (tied)" if len(botw['winner']) > 1 else ""))
-        # Runnerup is discontinued in newer topics
-        if 'runnerup' in botw:
-            runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
-            outTxtFile.write("* Runner up: [{0} by {1}]({2})\n\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
-        outTxtFile.write("---\n\n")
+        formatter['entry_func'](outTxtFile, botw)
     
     outTxtFile.close()
     
