@@ -21,7 +21,7 @@ import yaml
 # BEGIN FUNCTIONS FOR FORMATTER 'default'
 #
 def writeHallOfFameEntry(fp, botw):
-    fp.write("[{0}]({1})\n\n".format(botw['title'], botw['url']))
+    fp.write("{0}: [{1}]({2})\n\n".format(botw['datestring'], botw['title'], botw['url']))
     for winner in botw['winner']:
         winning_entry = filter(lambda x:x['entrant']==winner, botw['entries'])[0]
         fp.write("* Winner{3}: [{0} by {1}]({2})\n\n".format(winning_entry['title'], winning_entry['entrant'], winning_entry['url'], " (tied)" if len(botw['winner']) > 1 else ""))
@@ -43,6 +43,7 @@ def writeHallOfFameHeaderAlt(fp):
 
 def writeHallOfFameEntryAlt(fp, botw):
     fp.write("[**{0}**]({1})|".format(botw['title'], botw['url']))
+    fp.write(botw['datestring'] + "|")
     if len(botw['winner']) > 1:
         fp.write("**TIE**: ")
     for winner in botw['winner']:
@@ -53,7 +54,7 @@ def writeHallOfFameEntryAlt(fp, botw):
         runnerup_entry = filter(lambda x:x['entrant']==botw['runnerup'], botw['entries'])[0]
         fp.write("|[{0} by {1}]({2})\n".format(runnerup_entry['title'], runnerup_entry['entrant'], runnerup_entry['url']))
     else:
-        fp.write("\n")
+        fp.write("|---\n")
 #
 # END FUNCTIONS FOR FORMATTER 'exp'
 #
@@ -94,11 +95,15 @@ def main(argv=None):
     
     ymlFile.close()
     
+    # Relevant time deltas
+    nextWeek = datetime.timedelta(days=7)
+    
+    # Start date of first BotW (modern era)
+    currentdate = datetime.date.fromordinal(database['meta']['startdate'])
+    
     # Compile list of all entrants and entries
     entrants = dict()
     entries = []
-    
-    outTxtFile = open(outTxtName, "w")
     
     # Collect list of all entries and entrants
     for botw in database['botw']:
@@ -108,6 +113,20 @@ def main(argv=None):
             if entry['entrant'] not in entrants:
                 entrants[entry['entrant']] = 0
             entrants[entry['entrant']] += 1
+    
+    # Calculate timestamps
+    for botw in database['botw']:
+        # If this topic has a specially marked duration,
+        # increment by that many weeks. Default is 1
+        duration = botw['duration'] if 'duration' in botw else 1
+        
+        # Store date as a string
+        botw['datestring'] = "**{0}**".format(currentdate.strftime("%d %B %Y"))
+        
+        # Increment to next topic's date
+        currentdate += nextWeek * duration
+    
+    outTxtFile = open(outTxtName, "w")
     
     # Generate header
     outTxtFile.write("---\n\n")
