@@ -59,8 +59,7 @@ def main(argv=None):
     nextWeek = datetime.timedelta(days=7)
     
     # Start date of first BotW (modern era)
-    # TODO: take as argument? (Probably epoch date)
-    currentdate = datetime.date(2016, 10, 17)
+    currentdate = datetime.date.fromordinal(database['meta']['startdate'])
     
     outTxtFile = open(outTxtName, "w")
     
