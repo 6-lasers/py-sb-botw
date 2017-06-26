@@ -1,3 +1,6 @@
+meta:
+  # Proleptic Gregorian ordinal for 17 October, 2016
+  startdate: 736254
 botw:
   - title: Novakid Fluffalo Ranch
     desc: |
@@ -9,7 +12,8 @@ botw:
      * Must contain a large enough area for a minimum of 2 Fluffalo.
       
      * Fluffalo must appear to be secure. Either by a fence or whichever way you deem best.
-    url: https://www.reddit.com/r/starbound/comments/57pr7d/botw_novakid_western_themed_fluffalo_ranch/
+    #url: https://www.reddit.com/r/starbound/comments/57pr7d/botw_novakid_western_themed_fluffalo_ranch/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvi1
     entries:
       - entrant: SuperSniper2113
         title: "My Novakid Farm"
@@ -53,7 +57,8 @@ botw:
       
       ( If your build is based upon a game, movie or something else that others may not know of, please state in your post the source of the inspiration for the rest of the community & myself to judge fairly )
       
-    url: https://www.reddit.com/r/starbound/comments/591yrg/botw_the_terror_zone_halloween/
+    #url: https://www.reddit.com/r/starbound/comments/591yrg/botw_the_terror_zone_halloween/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvjw
     entries:
       - entrant: Duskera
         title: "Duskera's Revenge"
@@ -88,7 +93,8 @@ botw:
       
       * Must contain a minimum of 3 containers
       
-    url: https://www.reddit.com/r/starbound/comments/5ab707/botw_whatcha_gonna_do_with_all_that_junk/
+    #url: https://www.reddit.com/r/starbound/comments/5ab707/botw_whatcha_gonna_do_with_all_that_junk/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvmb
     entries:
       - entrant: alyssakx
         title: "Junk2Lava"
@@ -119,7 +125,8 @@ botw:
       
       * must contain at least 1 bedroom, 4 chairs and 1 table.
       
-    url: https://www.reddit.com/r/starbound/comments/5blcbf/botw_ye_olde_tavern/
+    #url: https://www.reddit.com/r/starbound/comments/5blcbf/botw_ye_olde_tavern/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvog
     entries:
       - entrant: NeodymiumDinosaur
         title: "The Grand Tavern of the Kuma Formation"
@@ -162,7 +169,8 @@ botw:
       
       * must contain at least 1 computer, and 2 pieces of minikog propaganda (big ape / banana signs etc).
       
-    url: https://www.reddit.com/r/starbound/comments/5cvacn/botw_chimpansee/
+    #url: https://www.reddit.com/r/starbound/comments/5cvacn/botw_chimpansee/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvq3
     entries:
       - entrant: Killernoobz
         title: "Project: Birds Eye View"
@@ -196,7 +204,8 @@ botw:
       
       * Must Contain at least 6 beds and a bathroom.
       
-    url: https://www.reddit.com/r/starbound/comments/5e3n2f/botw_humanade/
+    #url: https://www.reddit.com/r/starbound/comments/5e3n2f/botw_humanade/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvrf
     entries:
       - entrant: EndlessTetris
         title: "The FHY Refugee Camp (and lemonade stand)"
@@ -224,7 +233,8 @@ botw:
       
       * Must Contain at least 1 gong to call followers to worship, and a minimum of 4 pieces of seating.
       
-    url: https://www.reddit.com/r/starbound/comments/5fbqqr/botw_bird_of_pray/
+    #url: https://www.reddit.com/r/starbound/comments/5fbqqr/botw_bird_of_pray/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvti
     entries:
       - entrant: Killernoobz
         title: "The Grey-Beak Monastery"
@@ -258,7 +268,8 @@ botw:
       
       * Must Contain at least 1 bedroom for an adult supervisor and 1 toy ( for example, a plushie )
       
-    url: https://www.reddit.com/r/starbound/comments/5gls22/botw_plaice_of_birth/
+    #url: https://www.reddit.com/r/starbound/comments/5gls22/botw_plaice_of_birth/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvux
     entries:
       - entrant: EvilGuyPie
         title: "The Shallow Dojo"
@@ -287,6 +298,7 @@ botw:
     winner: [EvilGuyPie]
     runnerup: ChaoticTundra
   - title: Deck the Stars with Bounds of Jolly!
+    duration: 2
     desc: |
       
       Spread out across the galaxy, Some in camp sites, some in new settlements, some shooting through the stars, The humans are starting their strange yearly tradition of spreading cheer, exchanging presents, and covering everything in bright shiny things.
@@ -297,7 +309,8 @@ botw:
       
       * This BOTW has no strict building criteria. Go nuts!
       
-    url: https://www.reddit.com/r/starbound/comments/5hyex0/botw_deck_the_stars_with_bounds_of_jolly/
+    #url: https://www.reddit.com/r/starbound/comments/5hyex0/botw_deck_the_stars_with_bounds_of_jolly/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvwz
     entries:
       - entrant: LuxDeWakari
         title: "We Igloo A Merry Christmas"
@@ -339,7 +352,8 @@ botw:
       
       * must contain at least 1 "bird" like avian furniture ( or if you wish to go full out, a bird like creation ), 1 table, 2 chairs, and one piece of entertainment ( radio, a band playing, a games machine, what ever you deem fit )
       
-    url: https://www.reddit.com/r/starbound/comments/5kuvp3/mini_botw_year_of_the_avian/
+    #url: https://www.reddit.com/r/starbound/comments/5kuvp3/mini_botw_year_of_the_avian/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pvz1
     entries:
       - entrant: NeodymiumDinosaur
         title: "A Classy New Year's Party"
@@ -360,7 +374,8 @@ botw:
       
       * must contain at least 10 pieces of furniture, 3 crates, and an office fit for a Mafia crime boss.
       
-    url: https://www.reddit.com/r/starbound/comments/5lmxz4/botw_frogget_about_it/
+    #url: https://www.reddit.com/r/starbound/comments/5lmxz4/botw_frogget_about_it/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pw0y
     entries:
       - entrant: Taofeld
         title: "Underground Frogg Mafia Warehouse"
@@ -376,7 +391,8 @@ botw:
       
       * must contain a stage area, a seating area and a bar of some form.
       
-    url: https://www.reddit.com/r/starbound/comments/5mzuvr/botw_alpacapella/
+    #url: https://www.reddit.com/r/starbound/comments/5mzuvr/botw_alpacapella/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pw2r
     entries:
       - entrant: Taofeld
         title: "Mountainside Alpaca Bar and Theatre"
@@ -410,7 +426,8 @@ botw:
     
       * must contain at least 3 mannequins, 1 storage chest and a bedroom.
       
-    url: https://www.reddit.com/r/starbound/comments/5o9nqm/botw_ranch_dressing/
+    #url: https://www.reddit.com/r/starbound/comments/5o9nqm/botw_ranch_dressing/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pw5o
     entries:
       - entrant: sam_oh
         title: "You asked for ranch dressing..."
@@ -446,7 +463,8 @@ botw:
     
       * must contain a pool of water, a bar area, and at least 2 outdoor chairs.
       
-    url: https://www.reddit.com/r/starbound/comments/5pp9li/stress_releaf/
+    #url: https://www.reddit.com/r/starbound/comments/5pp9li/stress_releaf/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pw7l
     entries:
       - entrant: Wastelander2K
         title: "Floran Spa"
@@ -480,7 +498,8 @@ botw:
     
       * must contain at least 1 camp fire, 3 beds, and at least 1 building mid construction!
       
-    url: https://www.reddit.com/r/starbound/comments/5r48ye/botw_theres_a_glitch_in_the_system/
+    #url: https://www.reddit.com/r/starbound/comments/5r48ye/botw_theres_a_glitch_in_the_system/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pw9j
     entries:
       - entrant: Omuk7
         title: "Onset of a Kingdom"
@@ -510,7 +529,8 @@ botw:
     
       * must contain at least 3 storage crates, some hylotl influence and some human influence.
       
-    url: https://www.reddit.com/r/starbound/comments/5shzen/botw_pier_pressure/
+    #url: https://www.reddit.com/r/starbound/comments/5shzen/botw_pier_pressure/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwbz
     entries:
       - entrant: KronosTheThief
         title: "My first BOTW!"
@@ -553,7 +573,8 @@ botw:
     
       * must contain at least 1 bedroom and 1 dining area.
       
-    url: https://www.reddit.com/r/starbound/comments/5twl7g/botw_lust_in_space/
+    #url: https://www.reddit.com/r/starbound/comments/5twl7g/botw_lust_in_space/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwdy
     entries:
       - entrant: Bag-of-sticks
         title: "King size"
@@ -584,7 +605,8 @@ botw:
     
       * must contain at least 3 beds, a farm area and a storage area.
       
-    url: https://www.reddit.com/r/starbound/comments/5v6vim/botw_get_the_fenerox_out_of_here/
+    #url: https://www.reddit.com/r/starbound/comments/5v6vim/botw_get_the_fenerox_out_of_here/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwg3
     entries:
       - entrant: BlackandLightweight
         title: "Fenerox met an Apex town"
@@ -612,7 +634,8 @@ botw:
     
       * must contain at least 5 pieces of "Kluex" (temple) themed items, a worship room and a dock or teleport station.
       
-    url: https://www.reddit.com/r/starbound/comments/5wks11/botw_faith_lift/
+    #url: https://www.reddit.com/r/starbound/comments/5wks11/botw_faith_lift/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwi3
     entries:
       - entrant: "JustHarmony"
         title: "The Golden Sun"
@@ -643,7 +666,8 @@ botw:
     
       * must contain at least 3 sets of tables and chairs, 1 kitchen counter and a bathroom.
       
-    url: https://www.reddit.com/r/starbound/comments/5xxkn0/botw_espresso_yourself/
+    #url: https://www.reddit.com/r/starbound/comments/5xxkn0/botw_espresso_yourself/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwkp
     entries:
       - entrant: "AngriestKaiju"
         title: "Johnny O'Dare in...Planetary Espresso!"
@@ -698,7 +722,8 @@ botw:
     
       * must contain at least 1 office, a waiting room and a small claims court area.
       
-    url: https://www.reddit.com/r/starbound/comments/5z8zjl/botw_notice_of_a_peel/
+    #url: https://www.reddit.com/r/starbound/comments/5z8zjl/botw_notice_of_a_peel/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwmr
     entries:
       - entrant: "8bit_josh"
         title: "Law Offices of Kolp, Saavik & Bob"
@@ -727,7 +752,8 @@ botw:
     
       * must contain at least 1 living area for workers ( beds, food etc ), 1 method of transportation ( landing pad , teleporters, shipment crates etc ) and a mine shaft.
       
-    url: https://www.reddit.com/r/starbound/comments/60khl0/botw_grin_and_bear_it/
+    #url: https://www.reddit.com/r/starbound/comments/60khl0/botw_grin_and_bear_it/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwpf
     entries:
       - entrant: "POHANY"
         title: "mining drill"
@@ -773,7 +799,8 @@ botw:
     
       * must contain at least 1 vault, a protected service counter, a queuing area for customers and an office for the bank manager.
       
-    url: https://www.reddit.com/r/starbound/comments/61vndv/botw_gas_money/
+    #url: https://www.reddit.com/r/starbound/comments/61vndv/botw_gas_money/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwr4
     entries:
       - entrant: "AngriestKaiju"
         title: "Johnny O'Dare in...Emerald Valley Emergency!"
@@ -819,7 +846,8 @@ botw:
     
       * must contain 1 corn plant or piece of corn, 1 altar of some form and seating for worshippers.
       
-    url: https://www.reddit.com/r/starbound/comments/63arav/botw_the_unicorn/
+    #url: https://www.reddit.com/r/starbound/comments/63arav/botw_the_unicorn/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwtc
     entries:
       - entrant: "AngriestKaiju"
         title: "Johnny O'Dare in...The Maize of Doom!"
@@ -848,7 +876,8 @@ botw:
     winner: [AngriestKaiju]
     runnerup: ThreeTen22
   - title: "Here Comes The Reign!"
-    url: https://www.reddit.com/r/starbound/comments/64nf7o/botw_here_comes_the_reign/
+    #url: https://www.reddit.com/r/starbound/comments/64nf7o/botw_here_comes_the_reign/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwvn
     desc: |
       
       A Glitch of royal decent is currently visiting other races on a diplomatic mission to bring peace! 
@@ -884,7 +913,8 @@ botw:
     winner: ["gunnar120"]
     runnerup: "Knockduster"
   - title: "Humble beginnings!"
-    url: https://www.reddit.com/r/starbound/comments/65z9cj/botw_humble_beginnings/
+    #url: https://www.reddit.com/r/starbound/comments/65z9cj/botw_humble_beginnings/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwxp
     desc: |
       
       *This week is more of a challenge than normal. If it goes over well with the community I may do more of these in future.* 
@@ -963,7 +993,8 @@ botw:
     winner: ["Supernoob0122"]
     runnerup: "TeaChick"
   - title: "C.U.T.E"
-    url: https://www.reddit.com/r/starbound/comments/67dnkg/botw_cute/
+    #url: https://www.reddit.com/r/starbound/comments/67dnkg/botw_cute/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1pwzw
     desc: |
       
       After the notorious Dreadwing incident, Government's across the universe met to discuss rising threats and the need to tackle them. With Dreadwing they got lucky, a member of the protectorate managed to intervene and handle the issue. But they all agreed they needed something more reliable and solid. 
@@ -1000,7 +1031,8 @@ botw:
     winner: ["TeaChick"]
     runnerup: "AngriestKaiju"
   - title: "U.G.L.Y"
-    url: https://www.reddit.com/r/starbound/comments/68rjf2/botw_ugly/
+    #url: https://www.reddit.com/r/starbound/comments/68rjf2/botw_ugly/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1px2b
     desc: |
       
       C.U.T.E Case File 091283723 - Personal entry : Detective McSqueek
@@ -1056,7 +1088,8 @@ botw:
     winner: ["SoperSeb"]
     runnerup: "BlackandLightweight"
   - title: "The Natural wonders of the galaxy!"
-    url: https://www.reddit.com/r/starbound/comments/6aggkl/botw_the_natural_wonders_of_the_galaxy/
+    #url: https://www.reddit.com/r/starbound/comments/6aggkl/botw_the_natural_wonders_of_the_galaxy/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1px4x
     desc: |
       
       The Galatic summit fell into darkness as the lights turned off. A glowing white box appeared on the wall, flickering from an old projector. Professor Hugh Mungus stood sternly in front of the audience with a clicker in his hand. 
@@ -1122,7 +1155,8 @@ botw:
     winner: ["Jacapig"]
     runnerup: "TrIpTiCuS"
   - title: "Monumental Disaster"
-    url: https://www.reddit.com/r/starbound/comments/6be95n/botw_monumental_disaster/
+    #url: https://www.reddit.com/r/starbound/comments/6be95n/botw_monumental_disaster/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di1px74
     desc: |
       
       "it's an insult to everything Earth ever stood for" 
@@ -1166,3 +1200,189 @@ botw:
       url: https://www.reddit.com/r/starbound/comments/6bjuzw/botw_earths_gift/
     winner: ["Alliostra"]
     runnerup: "Eonwulf"
+  - title: Moving Up The Food Chain!
+    #url: https://www.reddit.com/r/starbound/comments/6csmej/botw_moving_up_the_food_chain/
+    url: https://www.reddit.com/r/starbound/comments/6dd5tr/build_of_the_week_historical_archive/di8guro/
+    desc: |
+
+      This week we will build a chain of supply for food.
+
+      Pick a food item, tier 3 or above, and build a facility to produce that item.
+
+      There is a list of cooked food on the wiki, sortable by tier :
+
+      http://starbounder.org/Food
+
+      It could be a factory, a farm, a fast food place, whatever you deem fit!
+
+      Whilst builds will be judged based on design, as usual, I thought this would be a nice way to show newer players how to get higher tier foods. So if you don't mind taking the time to post in the comments on what you're making, how you're making it &amp; what outside resources ( meat, snow etc ) you would need.
+
+
+      * Build a food production facility.
+      * must take food from raw resources to finished product, contain fridge storage and a shipment solution.
+
+    entries:
+    - entrant: "Alliostra"
+      title: "Bananacon Facility"
+      url: https://www.reddit.com/r/starbound/comments/6d3v9d/botw_bananacon_facility/
+    - entrant: "6_lasers"
+      title: "Animal Farm"
+      url: https://www.reddit.com/r/starbound/comments/6e0bzj/botw_animal_farm/
+    winner: ["Alliostra"]
+    runnerup: "6_lasers"
+  - title: Cool Wizard Island!
+    url: https://www.reddit.com/r/starbound/comments/6e8ghf/build_of_the_week_cool_wizard_island/
+    desc: |
+      ---
+      
+      > *Back when Earth was a thing, there was this really popular indie game called [Cool Wizard Island](http://starbounder.org/Red_Arcade_Machine) where you could be the wizard mayor on an island full of cool wizards.*
+      >  
+      > *You could befriend the other wizards by helping them with mundane tasks or hearing them out when they were feeling down, and in exchange they'd work with you to make improvements to the island and your cool wizard tower. Sometimes they'd give you gifts! It was a very nice game.*
+       
+      > *I'd like to imagine that somewhere in this universe with all its infinite possibilities, there's a real Cool Wizard Island.*
+      
+      ---
+       
+      
+      **BUILD CRITERIA**
+      
+      * Build an island containing at least one cool wizard (islands with more than one cool wizard are encouraged).
+      * Your island must contain living arrangements suitable for a cool wizard (think towers, caves, etc).
+      * **Submit your post with "BOTW" somewhere in the title, or we won't see it.**
+      
+      --- 
+      
+    entries:
+    - entrant: "Minerscool"
+      title: "Mini Magician City"
+      url: https://www.reddit.com/r/starbound/comments/6eoaog/botw_mini_magician_city/
+    - entrant: "rollergator01"
+      title: "Cool Wizard Island - Dark Magic Edition"
+      url: https://www.reddit.com/r/starbound/comments/6fbo77/botw_cool_wizard_island_dark_magic_edition/
+    - entrant: "groonfish"
+      title: "Welcome to Cool Wizard Island"
+      url: https://www.reddit.com/r/starbound/comments/6f60w6/botw_welcome_to_cool_wizard_island/
+    - entrant: "graywisteria"
+      title: "Cool Wizard Island(s)"
+      url: https://www.reddit.com/r/starbound/comments/6f38xl/botw_cool_wizard_islands/
+    - entrant: "AngriestKaiju"
+      title: "Johnny O'Dare in... Arcade Atrocity!"
+      url: https://www.reddit.com/r/starbound/comments/6f0hv1/botw_johnny_odare_inarcade_atrocity/
+    - entrant: "ChocoboDundee"
+      title: "Fallaren the Flying Wizard Tower"
+      url: https://www.reddit.com/r/starbound/comments/6evefc/botw_fallaran_the_flying_wizard_tower/
+    winner:
+      - "groonfish"
+  - title: Deep Sea Terror
+    url: https://www.reddit.com/r/starbound/comments/6fm3f9/build_of_the_week_deep_sea_terror/
+    desc: |
+      
+      ---
+      **VOTE FOR YOUR FAVORITE!** https://goo.gl/forms/HDdT7VSuroo1TfrT2
+      ---
+      ---
+      
+      > Hello. Have you noticed, lately, that the [sea is terrifying](http://imgur.com/a/6TlFA)? We've explored [less than five percent](http://oceanservice.noaa.gov/facts/exploration.html) of the oceans *on Earth*. We basically have no idea what's going on down there, but whatever it is, it's safe to say it's probably all awful. And at the rate we're going, it won't be long before even *more* of the Earth will be covered in horrible scary ocean. Please no.
+      > 
+      > Anyway, if our ocean is this bad imagine how terrifying **space oceans** must be.
+      
+      ---
+      
+      
+      **BUILD CRITERIA**
+      
+      * Build a deep dark scary place under the sea! A spooky shipwreck, an abandoned submarine, a sunken city? An illegal whale rave?
+    entries:
+    - entrant: "FastxSnail"
+      title: "The Sunken Sub"
+      url: https://www.reddit.com/r/starbound/comments/6fwku1/fast_snails_botw_deep_sea_the_sunken_sub_starbound/
+    - entrant: "ThePyzu"
+      title: "The Iron Fish"
+      url: https://www.reddit.com/r/starbound/comments/6fp4qo/botw_the_iron_fish/
+    - entrant: "EvantheWolf"
+      title: "Wrecked Sub"
+      url: https://www.reddit.com/r/starbound/comments/6fo7p8/botw_wrecked_sub/
+    - entrant: "Dtyn8"
+      title: "Deep Sea Skulkers"
+      url: https://www.reddit.com/r/starbound/comments/6gfh3u/botw_deep_sea_skulkers/
+    - entrant: "AngriestKaiju"
+      title: "Johnny O'Dare in...Twenty Thousand Leagues of Death!"
+      url: https://www.reddit.com/r/starbound/comments/6gh7w1/botw_johnny_odare_intwenty_thousand_leagues_of/
+    - entrant: "sanraymond"
+      title: "North Pole Leviathan"
+      url: https://www.reddit.com/r/starbound/comments/6gkjnx/botw_north_pole_leviathan/
+    - entrant: "IggyPopPwns"
+      title: "Forgotten Deep Sea Lab"
+      url: https://www.reddit.com/r/starbound/comments/6gp2q3/botw_forgotten_deep_sea_lab/
+    - entrant: "ArcticSix"
+      title: "Deep Sea Laboratory"
+      url: https://www.reddit.com/r/starbound/comments/6gqfmz/botw_deep_sea_laboratory/
+    - entrant: "StarboundandDown"
+      title: "The Breach"
+      url: https://www.reddit.com/r/starbound/comments/6gqlqv/botw_the_breach/
+    winner:
+      - "IggyPopPwns"
+    runnerup: "StarboundandDown"
+  - title: This Is Fine
+    url: https://www.reddit.com/r/starbound/comments/6h0lge/build_of_the_week_this_is_fine/
+    desc: |
+      
+      ---
+      
+      Sometimes you encounter a situation so absurd and upsetting and disastrous that you have to laugh so that the existential dread doesn't set in... like, I dunno, It's Fine that tentacles burst through the floor during your graduation and killed all your teachers and classmates and more or less everyone else on Earth. That was intentional, and good, and the Earth looks better that way, anyway. [This Is Fine](http://gunshowcomic.com/648).
+      
+      ---
+      
+      
+      **BUILD CRITERIA**
+      
+      * Build a situation in which everything is, decidedly, Not Fine. Use your imagination! It's not like there's any real-world inspiration you could possibly draw from, since 2017 has been absolutely Fine.
+    entries:
+    - entrant: "thecookiemaker"
+      title: "The Apocalypse"
+      url: https://www.reddit.com/r/starbound/comments/6h46u3/botw_the_apocalypse/
+    - entrant: "EvantheWolf"
+      title: "Reclaimed Apartment"
+      url: https://www.reddit.com/r/starbound/comments/6h4oav/botw_reclaimed_apartment/
+    - entrant: "extremeq16"
+      title: "Nailed the landing"
+      url: https://www.reddit.com/r/starbound/comments/6h4yly/botw_nailed_the_landing/
+    - entrant: "K1BBL3S"
+      title: "HOW THE HELL DO YOU GET RID OF FLUFFALO"
+      url: https://www.reddit.com/r/starbound/comments/6h5aok/botw_how_the_hell_do_you_get_rid_of_fluffalo/
+    - entrant: "ccstewy"
+      title: "A quiet drink at the bar"
+      url: https://www.reddit.com/r/starbound/comments/6hdhmh/botw_a_quiet_drink_at_the_bar/
+    - entrant: "AlterranLongbow"
+      title: "What Moon?"
+      url: https://www.reddit.com/r/starbound/comments/6he18q/botw_what_moon/
+    - entrant: "AngriestKaiju"
+      title: "Johnny O'Dare in... Hazardous Holiday!"
+      url: https://www.reddit.com/r/starbound/comments/6hec6q/botw_johnny_odare_inhazardous_holiday/
+    - entrant: "500pd"
+      title: "Perfectly Fine Landing"
+      url: https://www.reddit.com/r/starbound/comments/6hlo5y/botw_perfectly_fine_landing/
+    - entrant: "Mistercat2000"
+      title: "At least the weather's ok?"
+      url: https://www.reddit.com/r/starbound/comments/6hneg1/botw_at_least_the_weathers_ok/
+    - entrant: "Axetheaxemaster"
+      title: "The shipment might arrive late, Boss."
+      url: https://www.reddit.com/r/starbound/comments/6hovp2/botw_the_shipment_might_arrive_late_boss/
+    - entrant: "LitchiBorrower"
+      title: "I think we might be living in a computer simulation"
+      url: https://www.reddit.com/r/starbound/comments/6hpv9h/botw_i_think_we_might_be_living_in_a_computer/
+    - entrant: "Serinexxa"
+      title: "I came to the wrong neighborhood..."
+      url: https://www.reddit.com/r/starbound/comments/6hyvio/botw_i_came_to_the_wrong_neighborhood/
+    - entrant: "LiberateMainSt"
+      title: "Accidental BOTW - Power to Artificial Gravity is Down"
+      url: https://www.reddit.com/r/starbound/comments/6i0lqs/accidental_botw_power_to_artificial_gravity_is/
+    - entrant: "rezz1198"
+      title: "It still flies, right?"
+      url: https://www.reddit.com/r/starbound/comments/6i3kva/botw_it_still_flies_right/
+    - entrant: "Elevas"
+      title: "It's fine. Aggressively fine. I love my job here on this ship."
+      url: https://ns.reddit.com/r/starbound/comments/6h8pzk/botw_its_fine_aggressively_fine_i_love_my_job/
+    winner:
+      - "Mistercat2000"
+    runnerup: "LitchiBorrower"
